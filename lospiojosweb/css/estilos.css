@@ -34,6 +34,7 @@ footer {
     text-align: center;
     padding: 10px;
 }
+/*Ajustes de estilo para pagina Home*/
 
 /* Contenedor del video */
 .video-container {
@@ -116,6 +117,25 @@ footer {
     background-color: #a71308;
 }
 
+/*Fin de Ajustes de estilo para pagina Home*/
+
+/*Ajustes de estilo para pagina Proximas Fechas*/
+
+.banner-seccion {
+    width: 100%;
+    overflow: hidden;
+    position: relative; /* Asegura que se mantenga dentro del flujo normal */
+    top: 0; /* Lo deja arriba */
+    margin-bottom: 50px /* Espacio después del banner */
+}
+
+.banner-seccion img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción */
+    max-height: 980px; 
+    object-fit: contain; /* Evita recortes */
+}
+
 
 /* Ajuste especial SOLO para móviles */
 @media (max-width: 768px) {
@@ -137,4 +157,9 @@ footer {
         padding: 8px 12px;
         font-size: 0.9rem;
     }
+
+    .banner-seccion {
+        margin-bottom: auto; /* Reduce el espacio extra en móvil */
+
 }
+
