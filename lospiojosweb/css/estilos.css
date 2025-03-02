@@ -1,0 +1,140 @@
+body {
+    background: url(../imagenes/fondopiojo.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Mantiene el fondo fijo en todas las resoluciones */
+    width: 100%;
+    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+    margin: 0;
+    padding: 0;
+}  
+/* Asegurar que el body ocupe toda la pantalla y se expanda si el contenido es mayor */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajustar el main para que ocupe todo el espacio disponible */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; /* Asegurar que respete la posición */
+}
+
+
+  
+/* Footer fijo abajo */
+footer {
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Contenedor del video */
+.video-container {
+    position: fixed; /* Fija el video al fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Sigue detrás del contenido */
+}
+
+/* Ajuste del video */
+.video-container video {
+    width: 100vw;  /* Ocupa todo el ancho */
+    height: 100vh; /* Ocupa toda la altura */
+    object-fit: cover; /* Se ajusta sin distorsión */
+}
+.boton-sonido {
+    position: absolute;
+    top: 20px;  /* Ajusta la distancia desde arriba */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    z-index: 10; /* Asegura que el botón esté sobre el video */
+}     
+
+
+/* Estilo del banner */
+.banner-container {
+    position: absolute;
+    bottom: 60px; /* Lo coloca en la parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.banner-container button {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-style: normal;
+    text-transform: uppercase;
+    font-family: "Saira Stencil One", sans-serif;
+}
+
+.banner-container button:hover {
+    background-color: #ebe8e8;
+    color: #0734ff;
+}
+
+/* Estilo del modal */
+.modal-content {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+
+}
+
+.modal-title {font-style: normal;
+    font-family: "Saira Stencil One", sans-serif;
+    text-transform: uppercase;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.btn-close {
+    filter: invert(1); /* Hace el botón de cerrar blanco */
+}
+
+.modal-footer .btn-primary {
+    background-color: #0734ff;
+    border: none;
+    font-weight: bold;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #a71308;
+}
+
+
+/* Ajuste especial SOLO para móviles */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Permite que el fondo fluya con el contenido */
+        background-position: top center; /* Asegura que la parte más importante se vea */
+    }
+    .video-container {
+        height: auto; /* Permite que el video se ajuste dinámicamente */
+    }
+    .banner-container button {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+
+
+    .banner-container button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
