@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Los Piojos - Sitio Oficial En Vivo</title>
+    <title>Los Piojos - Sitio Oficial | En Vivo</title>
      <!-- Enlace a archivo CSS -->
      <link rel="stylesheet" href="../css/estilos.css">
      <!-- Enlace a Bootstrap CSS -->
@@ -89,34 +89,20 @@
 
 
 <main>
-<div></div>
+
+
     <div>
         <section class="banner-seccion">
             <img src="../envivo/imagenes/banner-envivo.png" alt="Próximas Fechas" class="img-fluid">
         </section>
     </div>    
 
+
     <section id="galeria" class="container mt-5">
+        <div class="contenedor-imagenes p-4">
         <h2 class="text-center mb-4">POSTALES DE RITUALES</h2>
-        <div class="row g-3">
-            <!-- Imagen 1 -->
-            <div class="col-md-4 col-6">
-                <img src="img/concierto1.jpg" class="img-fluid rounded shadow-sm" alt="Concierto 1"
-                    data-bs-toggle="modal" data-bs-target="#modalImagen"
-                    onclick="abrirModal(0)">
-            </div>
-            <!-- Imagen 2 -->
-            <div class="col-md-4 col-6">
-                <img src="img/concierto2.jpg" class="img-fluid rounded shadow-sm" alt="Concierto 2"
-                    data-bs-toggle="modal" data-bs-target="#modalImagen"
-                    onclick="abrirModal(1)">
-            </div>
-            <!-- Imagen 3 -->
-            <div class="col-md-4 col-6">
-                <img src="img/concierto3.jpg" class="img-fluid rounded shadow-sm" alt="Concierto 3"
-                    data-bs-toggle="modal" data-bs-target="#modalImagen"
-                    onclick="abrirModal(2)">
-            </div>
+        <div class="row g-3" id="contenedorGaleria">
+            <!-- Las imágenes se generarán dinámicamente con JavaScript -->
         </div>
     </section>
     
@@ -137,6 +123,8 @@
             </div>
         </div>
     </div>
+</div>
+
 </main>
 
 
@@ -149,5 +137,6 @@
         <p>©2025 Los Piojos- Sitio Oficial. Todos los derechos reservados.</p>
       </footer>      
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
- </body>
+      <script src="../js/envivo.js" defer></script>
+    </body>
  </html>
