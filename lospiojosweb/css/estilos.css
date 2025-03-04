@@ -6,6 +6,7 @@ body {
     min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
     margin: 0;
     padding: 0;
+
 }  
 /* Asegurar que el body ocupe toda la pantalla y se expanda si el contenido es mayor */
 html, body {
@@ -64,7 +65,7 @@ footer {
 /* Estilo del banner */
 .banner-container {
     position: absolute;
-    bottom: 60px; /* Lo coloca en la parte inferior */
+    bottom: 85px; /* Lo coloca en la parte inferior */
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -85,6 +86,9 @@ footer {
     background-color: #ebe8e8;
     color: #0734ff;
 }
+
+
+
 
 /* Estilo del modal */
 .modal-content {
@@ -108,7 +112,7 @@ footer {
 }
 
 .modal-footer .btn-primary {
-    background-color: #0734ff;
+    background-color: #060607;
     border: none;
     font-weight: bold;
 }
@@ -122,19 +126,19 @@ footer {
 /*Ajustes de estilo para pagina Proximas Fechas*/
 
 .banner-seccion {
-    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    position: relative; /* Asegura que se mantenga dentro del flujo normal */
-    top: 0; /* Lo deja arriba */
-    margin-bottom: 50px /* Espacio después del banner */
 }
 
 .banner-seccion img {
-    width: 100%;
-    height: auto; /* Mantiene la proporción */
-    max-height: 990px; 
-    object-fit: contain; /* Evita recortes */
+    width: 100%; /* Ajusta la imagen al ancho */
+    height: 100%; /* Ajusta la imagen al alto */
+    object-fit: cover; /* Evita que se deforme */
 }
+
 
 .contenedor-fechas {
 
@@ -154,6 +158,67 @@ footer {
 .text-center {
     font-family: "Saira Stencil One", sans-serif;
     text-transform: uppercase;
+}
+
+
+/* Estilo adicional para el video */
+.video-container {
+    margin-bottom: 30px; /* Espacio adicional después del video */
+}
+
+.video-container iframe {
+    border-radius: 10px; /* Bordes redondeados para el iframe */
+}
+
+
+/*Estilo adicional para el video en index de Rituales*/
+.contenedor-video-rituales {
+    max-width: 900px; /* Tamaño máximo del video */
+    margin: 20px auto; /* Centrar el video y dar espacio arriba/abajo */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que sobresalga */
+}
+
+/* Contenedor de las noticias con fondo oscuro translúcido */
+.contenedor-noticias {
+    background: rgba(0, 0, 0, 0.7); /* Fondo negro con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+/* Ajuste para la barra lateral */
+.col-md-4 {
+    position: sticky;
+    top: 20px;
+}
+
+/* Estilos para los artículos */
+article {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea separadora tenue */
+}
+
+article h2 {
+    color: white;
+}
+
+.btn-primary {
+    background-color: #0734ff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #a71308;
+}
+
+/* Ajustar tamaño de imágenes dentro de los artículos */
+article img {
+    width: 60%;  /* Ajusta el porcentaje según lo que desees */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Asegura que no tenga espacios extra */
+    margin: 0 auto; /* Centra la imagen */
+    border-radius: 8px; /* Opcional: bordes redondeados */
 }
 
 /* Ajuste especial SOLO para móviles */
@@ -176,12 +241,16 @@ footer {
         padding: 8px 12px;
         font-size: 0.9rem;
     }
-
     .banner-seccion {
-        margin-bottom: auto; /* Reduce el espacio extra en móvil */
+        height: auto; /* Deja que el contenido defina la altura */
+    }
+
+    .banner-seccion img {
+        height: auto; /* Mantiene la proporción */
     }
     .contenedor-fechas {
-        max-width: 90%; /* Se adapta en pantallas medianas */
+        max-width: 100%; /* Se adapta en pantallas medianas */
     }
+
 
   }
