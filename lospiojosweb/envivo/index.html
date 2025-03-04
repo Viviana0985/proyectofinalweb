@@ -89,14 +89,54 @@
 
 
 <main>
-
+<div></div>
     <div>
         <section class="banner-seccion">
             <img src="../envivo/imagenes/banner-envivo.png" alt="Próximas Fechas" class="img-fluid">
         </section>
     </div>    
 
+    <section id="galeria" class="container mt-5">
+        <h2 class="text-center mb-4">POSTALES DE RITUALES</h2>
+        <div class="row g-3">
+            <!-- Imagen 1 -->
+            <div class="col-md-4 col-6">
+                <img src="img/concierto1.jpg" class="img-fluid rounded shadow-sm" alt="Concierto 1"
+                    data-bs-toggle="modal" data-bs-target="#modalImagen"
+                    onclick="abrirModal(0)">
+            </div>
+            <!-- Imagen 2 -->
+            <div class="col-md-4 col-6">
+                <img src="img/concierto2.jpg" class="img-fluid rounded shadow-sm" alt="Concierto 2"
+                    data-bs-toggle="modal" data-bs-target="#modalImagen"
+                    onclick="abrirModal(1)">
+            </div>
+            <!-- Imagen 3 -->
+            <div class="col-md-4 col-6">
+                <img src="img/concierto3.jpg" class="img-fluid rounded shadow-sm" alt="Concierto 3"
+                    data-bs-toggle="modal" data-bs-target="#modalImagen"
+                    onclick="abrirModal(2)">
+            </div>
+        </div>
+    </section>
     
+    <!-- Modal -->
+    <div class="modal fade" id="modalImagen" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body text-center position-relative">
+                    <!-- Botón Anterior -->
+                    <button class="btn btn-dark position-absolute start-0 top-50 translate-middle-y"
+                        onclick="cambiarImagen(-1)">&#9665;</button>
+                    <!-- Imagen -->
+                    <img id="imagenAmpliada" class="img-fluid rounded" src="" alt="Imagen ampliada">
+                    <!-- Botón Siguiente -->
+                    <button class="btn btn-dark position-absolute end-0 top-50 translate-middle-y"
+                        onclick="cambiarImagen(1)">&#9655;</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 
