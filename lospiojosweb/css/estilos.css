@@ -183,7 +183,7 @@ footer {
 
 /* Contenedor de las noticias con fondo oscuro translúcido */
 .contenedor-noticias {
-    background: rgba(0, 0, 0, 0.7); /* Fondo negro con transparencia */
+    background: rgba(0, 0, 0, 0.4); /* Fondo negro con transparencia */
     padding: 20px;
     border-radius: 10px;
     color: white;
@@ -245,7 +245,26 @@ h2 {
     position: relative; /* Lo mantiene por encima */
     z-index: 2; /* Mayor que el del contenedor */
 }
+.contenedor-transparente {
+    background-color: rgba(0, 0, 0, 0.7); /* Negro con transparencia */ !important
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    position: relative; /* Para permitir z-index */
+    z-index: 1; /* Mantiene el fondo detrás del título */
+}
 
+.historia-img {
+    width: 100%;  /* Asegura que la imagen ocupe el 100% del contenedor */
+    max-width: 100%;  /* Limita el ancho máximo a 100% */
+    height: auto;  /* Mantiene la proporción de la imagen */
+    object-fit: contain;  /* Asegura que la imagen no se recorte y se ajuste sin deformarse */
+    border: 5px solid #fff; /* Bordes blancos de 5px */
+    border-radius: 10px; /* Bordes redondeados, puedes ajustarlo */
+  }
+
+  body .bg-dark {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
 /* Ajuste especial SOLO para móviles */
 @media (max-width: 768px) {
     body {
