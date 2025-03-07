@@ -6,6 +6,7 @@ body {
     min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
     margin: 0;
     padding: 0;
+    background-attachment: fixed; /* Mantiene el fondo fijo en todas las resoluciones */
 
 }  
 /* Asegurar que el body ocupe toda la pantalla y se expanda si el contenido es mayor */
@@ -321,6 +322,8 @@ h2 {
 }
 
 
+
+
 /* Ajuste especial SOLO para móviles */
 @media (max-width: 768px) {
     body {
@@ -365,6 +368,18 @@ h2 {
         
 
     }
-        
+    .row {
+        .col-12 {
+            flex: 0 0 100%; /* Hace que las columnas ocupen todo el ancho en pantallas pequeñas */
+        }
+    
+        .card {
+            max-width: 100%; /* Evita que las tarjetas se estiren demasiado */
+            width: 100%;     /* Hace que las tarjetas ocupen el 100% del ancho disponible */
+        }
+    
+        .card-body {
+            padding: 1rem; /* Ajusta el padding para que la tarjeta sea más compacta */
+        }  
 
   }
