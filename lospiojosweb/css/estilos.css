@@ -6,7 +6,6 @@ body {
     min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
     margin: 0;
     padding: 0;
-    background-attachment: fixed; /* Mantiene el fondo fijo en todas las resoluciones */
 
 }  
 /* Asegurar que el body ocupe toda la pantalla y se expanda si el contenido es mayor */
@@ -154,9 +153,16 @@ footer {
 
 }
 .card-img-top {
-    height: 350px; /* Ajusta la altura de las imágenes */
+    height: 250px; /* Ajusta la altura de las imágenes */
     object-fit: contain; /* Evita recortes */
+    
 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 .text-center {
     font-family: "Saira Stencil One", sans-serif;
@@ -180,6 +186,11 @@ body .text-muted {
     border-radius: 10px; /* Bordes redondeados para el iframe */
 }
 
+.container {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 /*Estilo adicional para el video en index de Rituales*/
 .contenedor-video-rituales {
@@ -191,7 +202,7 @@ body .text-muted {
 
 /* Contenedor de las noticias con fondo oscuro translúcido */
 .contenedor-noticias {
-    background: rgba(0, 0, 0, 0.4); /* Fondo negro con transparencia */
+    background: rgba(0, 0, 0, 0.7); /* Fondo negro con transparencia */
     padding: 20px;
     border-radius: 10px;
     color: white;
@@ -288,6 +299,35 @@ h2 {
     flex-grow: 1;
 }
 
+/* Ajuste de los textos dentro de las tarjetas */
+.card-body {
+    text-align: center;
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Enlace a Spotify */
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #000000;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.card a:hover {
+    background-color: #1331b8;
+}
+
 /*Ajustes imagenes galería EN VIVO*/
 
 #galeria .contenedor-imagenes {
@@ -322,6 +362,17 @@ h2 {
 }
 
 
+/*Ajuste pagina letras*/
+
+.letras-titulo {
+    color: white;
+}
+
+.contenedor-letras {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con 70% de opacidad */
+    padding: 20px;
+    border-radius: 8px;
+}
 
 
 /* Ajuste especial SOLO para móviles */
@@ -381,5 +432,11 @@ h2 {
         .card-body {
             padding: 1rem; /* Ajusta el padding para que la tarjeta sea más compacta */
         }  
-
+        .card img {
+            height: 200px; /* Reduce la altura en pantallas chicas */
+        }
+    
+        .card {
+            margin-bottom: 20px; /* Separa más las tarjetas */
+        }
   }
