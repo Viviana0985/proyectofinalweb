@@ -480,6 +480,20 @@ section .card:hover {
 
 }
 
+.afiche-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .afiche-img {
+    max-width: 90%;
+    border: 10px solid white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  
 /* Ajuste especial SOLO para móviles */
 @media (max-width: 768px) {
     body {
