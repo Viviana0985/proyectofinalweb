@@ -97,9 +97,97 @@
   </nav>
   
   <!-- Fin Menu con Bootstrap -->
-<main>
 
+    <div>
+        <section class="banner-seccion">
+            <img src="../piojosos/imagenes/banner-trapos.png" alt="Trapos" class="img-fluid">
+        </section>
+    </div>
+        
+    <main>
+        <section id="historia" class="bg-dark text-white py-5">
+            <div class="container py-5">
+            <div class="contenedor-transparente">
+              <h2 class="text-center mb-4">Trapos Piojosos</h2>
 
+                            <!-- Sección con video e información -->
+                            <div class="row align-items-center mb-5">
+                                <div class="col-12 col-md-6">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe  src="https://www.youtube.com/embed/cKGxKCd57Ko?si=s0fE28X04GuCVjYs"
+                                        title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        eferrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <h3>El Sentimiento Piojoso</h3>
+                                    <p>Los trapos piojosos han acompañado a la banda en cada recital, representando el aguante de la gente. Desde pequeños estandartes hasta enormes banderas, el colorido de Los Piojos siempre se hizo presente.</p>
+                                    <img src="../piojosos/imagenes/bandera00.webp" alt="Trapo Piojoso 1" class="img-fluid img-thumbnail my-2">
+                                    <p>Cada bandera tiene su historia, su barrio, cada frase tiene su sentimiento.</p>
+                                </div>
+                            </div>
+            
+<!-- Grilla de imágenes -->
+<div class="row g-4">
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="image-container">
+            <img src="../piojosos/imagenes/bandera01.webp" 
+                 alt="Trapo Piojoso 2" 
+                 class="img-fluid img-thumbnail modal-trigger">
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="image-container">
+            <img src="../piojosos/imagenes/bandera05.jpg" 
+                 alt="Trapo Piojoso 3" 
+                 class="img-fluid img-thumbnail modal-trigger">
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="image-container">
+            <img src="../piojosos/imagenes/bandera03.jpg" 
+                 alt="Trapo Piojoso 4" 
+                 class="img-fluid img-thumbnail modal-trigger">
+        </div>
+    </div>
+    </div>
+      <div class="text-center mt-5"></div>
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/XsgMH4ZN7A8?si=8AhIHZ-k4ut7NmNy"
+        title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    </div>
+            </div>
+                </div>
+                </section>
+            
+                <!-- Modal Dinámico -->
+                <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content bg-dark text-white">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <img id="modalImage" src="" class="img-fluid">
+                            </div>
+                            <div class="modal-footer d-flex justify-content-between">
+                                <button id="prevBtn" class="btn btn-outline-light">Anterior</button>
+                                <button id="nextBtn" class="btn btn-outline-light">Siguiente</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </main>
+            
+
+    </section>
+            </div>
     
 </main>
 
@@ -112,5 +200,6 @@
         <p>©2025 Los Piojos- Sitio No Oficial. Todos los derechos reservados.</p>
       </footer>      
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
- </body>
+      <script src="../js/trapos.js" defer></script>
+    </body>
  </html>
