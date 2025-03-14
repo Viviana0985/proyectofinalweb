@@ -254,11 +254,6 @@ article img {
     border-radius: 8px; /* Opcional: bordes redondeados */
 }
 
-.contenedor-transparente {
-    background-color: rgba(0, 0, 0, 0.7) !important; /* Mover el !important dentro de la declaración */
-    border-radius: 10px;
-    padding: 20px;
-}
 
 .contenedor-imagenes {
     background-color: rgba(0, 0, 0, 0.7); /* Negro con transparencia */
@@ -277,7 +272,7 @@ h2 {
     z-index: 2; /* Mayor que el del contenedor */
 }
 .contenedor-transparente {
-    background-color: rgba(0, 0, 0, 0.7); /* Negro con transparencia */ !important
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Negro con transparencia */
     border-radius: 10px; /* Bordes redondeados */
     padding: 20px; /* Espaciado interno */
     position: relative; /* Para permitir z-index */
@@ -380,7 +375,7 @@ h2 {
 /*Ajuste pagina letras*/
 
 .letras-titulo {
-    color: white;
+    color: rgb(41, 39, 39);
 }
 
 .contenedor-letras {
@@ -441,6 +436,23 @@ h2 {
 section .card {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+/* Asegurar que el título y el texto del formulario sean negros */
+section.contacto-form h1, 
+section.contacto-form p, 
+section.contacto-form label {
+    color: black !important;
+}
+
+
+/* Ajuste responsive del formulario */
+section .card {
+    width: 100%;
+    max-width: 700px; /* Limita el ancho en pantallas grandes */
+    margin: 0 auto; /* Centra el formulario */
+}
+
+/* Ajuste para pagina cajas viejas*/
 
 section .card:hover {
     transform: scale(1.05);
@@ -524,6 +536,9 @@ section .card:hover {
     color: #ffffff; /* Texto blanco */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra blanca suave */
 }
+
+/* Ajuste para pagina sección piojosos*/
+
 
 /* Galería */
 .contenedor-galeria {
@@ -631,4 +646,18 @@ section .card:hover {
         .card {
             margin-bottom: 20px; /* Separa más las tarjetas */
         }
+
+        @media (max-width: 576px) {
+            section .card {
+                padding: 15px; /* Reduce el padding en pantallas pequeñas */
+            }
+            
+            .form-control {
+                font-size: 14px; /* Ajusta el tamaño del texto en inputs */
+            }
+            
+            button.btn {
+                width: 100%; /* Botón de ancho completo en móviles */
+            }
+        }        
   }
