@@ -494,6 +494,24 @@ section .card:hover {
     filter: brightness(1.2);
 }
 
+/* Contenedor específico de texto */
+.contenedor-texto-piojoso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Caja de texto con bordes */
+.texto-box {
+    max-width: 600px;
+    padding: 20px;
+    border: 2px solid #ffffff; /* Bordes blancos */
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    color: #ffffff; /* Texto blanco */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra blanca suave */
+}
 
 /* Ajuste especial SOLO para móviles */
 @media (max-width: 768px) {
