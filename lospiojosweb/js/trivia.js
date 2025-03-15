@@ -54,29 +54,23 @@ document.addEventListener("DOMContentLoaded", function () {
             const boton = document.createElement("button");
             boton.textContent = opcion;
             boton.classList.add("btn", "btn-outline-danger", "m-2");
-            boton.addEventListener("click", () => verificarRespuesta(opcion, preguntaActual.respuesta));
+            boton.addEventListener("click", () => {
+                // Bloquear todos los botones después de que se haga clic
+                bloquearBotones();
+                verificarRespuesta(opcion, preguntaActual.respuesta);
+            });
             opcionesContenedor.appendChild(boton);
         });
     }
 
-    function verificarRespuesta(opcionSeleccionada, respuestaCorrecta) {
-        if (opcionSeleccionada === respuestaCorrecta) {
-            puntaje += 10;
-        } else {
-            intentos--;
-            puntaje -= 2;
-        }
-
-        puntajeTexto.textContent = `Puntaje: ${puntaje}`;
-
-        if (intentos === 0) {
-            resultadoTexto.textContent = "¡Perdiste! Inténtalo de nuevo.";
-            jugarNuevoBtn.classList.remove("d-none");
-            finalizarJuegoBtn.classList.add("d-none");
-        } else {
-            mostrarPregunta();
-        }
+    function bloquearBotones() {
+        const botones = opcionesContenedor.querySelectorAll("button");
+        botones.forEach(boton => {
+            boton.disabled = true; // Bloquear todos los botones
+        });
     }
+
+    // Función corregida de verificarRespuesta
     function verificarRespuesta(opcionSeleccionada, respuestaCorrecta) {
         if (opcionSeleccionada === respuestaCorrecta) {
             puntaje += 10;
@@ -88,9 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
             resultadoTexto.textContent = "❌ Incorrecto.";
             resultadoTexto.style.color = "red";
         }
-    
+
         puntajeTexto.textContent = `Puntaje: ${puntaje}`;
-    
+
         if (intentos === 0) {
             resultadoTexto.textContent = "¡Perdiste! Inténtalo de nuevo.";
             jugarNuevoBtn.classList.remove("d-none");
@@ -102,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 2000);
         }
     }
-    
 
     function reiniciarJuego() {
         iniciarJuego();
