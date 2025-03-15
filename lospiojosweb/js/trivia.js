@@ -41,23 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
         resultadoTexto.textContent = "";
         jugarNuevoBtn.classList.add("d-none");
         iniciarJuegoBtn.classList.add("d-none");
-        finalizarJuegoBtn.classList.remove("d-none");
-        preguntasDisponibles = [...preguntas]; // Resetear preguntas disponibles
         mostrarPregunta();
     }
 
     function mostrarPregunta() {
-        if (preguntasDisponibles.length === 0) {
-            resultadoTexto.textContent = "¡Felicidades! Has respondido todas las preguntas. ¡Ser Piojoso lo llevas bien Adentro!";
-            jugarNuevoBtn.classList.remove("d-none");
-            finalizarJuegoBtn.classList.add("d-none");
-            return;
-        }
-
-        // Elegir una pregunta aleatoria y eliminarla de las preguntas disponibles
-        const preguntaIndex = Math.floor(Math.random() * preguntasDisponibles.length);
-        const preguntaActual = preguntasDisponibles.splice(preguntaIndex, 1)[0];
-
+        const preguntaActual = preguntas[Math.floor(Math.random() * preguntas.length)];
         preguntaTexto.textContent = preguntaActual.pregunta;
         opcionesContenedor.innerHTML = "";
 
@@ -73,13 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function verificarRespuesta(opcionSeleccionada, respuestaCorrecta) {
         if (opcionSeleccionada === respuestaCorrecta) {
             puntaje += 10;
-            resultadoTexto.textContent = "✅ ¡Correcto!";
-            resultadoTexto.style.color = "green";
         } else {
             intentos--;
             puntaje -= 2;
-            resultadoTexto.textContent = "❌ Incorrecto.";
-            resultadoTexto.style.color = "red";
         }
 
         puntajeTexto.textContent = `Puntaje: ${puntaje}`;
@@ -87,29 +71,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (intentos === 0) {
             resultadoTexto.textContent = "¡Perdiste! Inténtalo de nuevo.";
             jugarNuevoBtn.classList.remove("d-none");
-            finalizarJuegoBtn.classList.add("d-none");
         } else {
-            setTimeout(() => {
-                resultadoTexto.textContent = ""; // Borra el mensaje tras 1.5 segundos
-                mostrarPregunta();
-            }, 2500);
+            mostrarPregunta();
         }
     }
 
-    function reiniciarJuego() {
-        iniciarJuego();
-    }
-
-    function finalizarJuego() {
-        iniciarJuegoBtn.classList.remove("d-none");
-        jugarNuevoBtn.classList.add("d-none");
-        finalizarJuegoBtn.classList.add("d-none");
-        preguntaTexto.textContent = "";
-        opcionesContenedor.innerHTML = "";
-        resultadoTexto.textContent = "Juego finalizado. Presiona 'Iniciar Juego' para jugar otra vez.";
-    }
-
     iniciarJuegoBtn.addEventListener("click", iniciarJuego);
-    jugarNuevoBtn.addEventListener("click", reiniciarJuego);
-    finalizarJuegoBtn.addEventListener("click", finalizarJuego);
 });
