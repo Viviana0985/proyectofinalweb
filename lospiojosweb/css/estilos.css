@@ -646,7 +646,8 @@ section .card:hover {
         .card {
             margin-bottom: 20px; /* Separa más las tarjetas */
         }
-
+   
+    }
         @media (max-width: 576px) {
             section .card {
                 padding: 15px; /* Reduce el padding en pantallas pequeñas */
