@@ -78,31 +78,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     function verificarRespuesta(opcionSeleccionada, respuestaCorrecta) {
-    if (opcionSeleccionada === respuestaCorrecta) {
-        puntaje += 10;
-        resultadoTexto.textContent = "✅ ¡Correcto!";
-        resultadoTexto.style.color = "green";
-    } else {
-        intentos--;
-        puntaje -= 2;
-        resultadoTexto.textContent = "❌ Incorrecto.";
-        resultadoTexto.style.color = "red";
+        if (opcionSeleccionada === respuestaCorrecta) {
+            puntaje += 10;
+            resultadoTexto.textContent = "✅ ¡Correcto!";
+            resultadoTexto.style.color = "green";
+        } else {
+            intentos--;
+            puntaje -= 2;
+            resultadoTexto.textContent = "❌ Incorrecto.";
+            resultadoTexto.style.color = "red";
+        }
+    
+        puntajeTexto.textContent = `Puntaje: ${puntaje}`;
+    
+        if (intentos === 0) {
+            resultadoTexto.textContent = "¡Perdiste! Inténtalo de nuevo.";
+            jugarNuevoBtn.classList.remove("d-none");
+            finalizarJuegoBtn.classList.add("d-none");
+        } else {
+            setTimeout(() => {
+                resultadoTexto.textContent = ""; // Borra el mensaje tras 1.5 segundos
+                mostrarPregunta();
+            }, 3000);
+        }
     }
-
-    puntajeTexto.textContent = `Puntaje: ${puntaje}`;
-
-    if (intentos === 0) {
-        resultadoTexto.textContent = "¡Perdiste! Inténtalo de nuevo.";
-        jugarNuevoBtn.classList.remove("d-none");
-        finalizarJuegoBtn.classList.add("d-none");
-    } else {
-        setTimeout(() => {
-            resultadoTexto.textContent = ""; // Borra el mensaje tras 1.5 segundos
-            mostrarPregunta();
-        }, 1500);
-    }
-}
-
+    
 
     function reiniciarJuego() {
         iniciarJuego();
