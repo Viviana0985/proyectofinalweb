@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         resultadoTexto.textContent = "";
         jugarNuevoBtn.classList.add("d-none");
         iniciarJuegoBtn.classList.add("d-none");
+        finalizarJuegoBtn.classList.remove("d-none");
         mostrarPregunta();
     }
 
@@ -71,10 +72,26 @@ document.addEventListener("DOMContentLoaded", function () {
         if (intentos === 0) {
             resultadoTexto.textContent = "¡Perdiste! Inténtalo de nuevo.";
             jugarNuevoBtn.classList.remove("d-none");
+            finalizarJuegoBtn.classList.add("d-none");
         } else {
             mostrarPregunta();
         }
     }
 
+    function reiniciarJuego() {
+        iniciarJuego();
+    }
+
+    function finalizarJuego() {
+        iniciarJuegoBtn.classList.remove("d-none");
+        jugarNuevoBtn.classList.add("d-none");
+        finalizarJuegoBtn.classList.add("d-none");
+        preguntaTexto.textContent = "";
+        opcionesContenedor.innerHTML = "";
+        resultadoTexto.textContent = "Juego finalizado. Presiona 'Iniciar Juego' para jugar otra vez.";
+    }
+
     iniciarJuegoBtn.addEventListener("click", iniciarJuego);
+    jugarNuevoBtn.addEventListener("click", reiniciarJuego);
+    finalizarJuegoBtn.addEventListener("click", finalizarJuego);
 });
