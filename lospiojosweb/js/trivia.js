@@ -97,9 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
             finalizarJuegoBtn.classList.add("d-none");
         } else {
             setTimeout(() => {
-                resultadoTexto.textContent = ""; // Borra el mensaje tras 1.5 segundos
+                resultadoTexto.textContent = ""; // Borra el mensaje tras 2 segundos
                 mostrarPregunta();
-            }, 3000);
+            }, 2000);
         }
     }
     
@@ -109,7 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function finalizarJuego() {
-        iniciarJuegoBtn.classList.remove("d-none");
         jugarNuevoBtn.classList.add("d-none");
         finalizarJuegoBtn.classList.add("d-none");
         preguntaTexto.textContent = "";
