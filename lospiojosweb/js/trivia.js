@@ -104,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function finalizarJuego() {
         jugarNuevoBtn.classList.add("d-none");
         finalizarJuegoBtn.classList.add("d-none");
+        iniciarJuegoBtn.classList.remove("d-none");  // Asegúrate de mostrar el botón de "Iniciar Juego"
         preguntaTexto.textContent = "";
         opcionesContenedor.innerHTML = "";
         resultadoTexto.textContent = "Juego finalizado. Presiona 'Iniciar Juego' para jugar otra vez.";
