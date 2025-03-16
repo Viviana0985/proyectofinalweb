@@ -9,7 +9,7 @@
      <!-- Enlace a Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Fancybox CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
     <!-- Fancybox JS -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
      <!-- Enlace a Google Fonts -->
@@ -82,9 +82,11 @@
                       Piojosos
                   </a>
                   <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="../piojosos/index.html">Trapos</a></li>
-                      <li><a class="dropdown-item" href="../piojosos/tatuajeazul.html">Tatuaje Azul</a></li>
-                  </ul>  
+                    <li><a class="dropdown-item" href="../piojosos/index.html">Trapos</a></li>
+                    <li><a class="dropdown-item" href="../piojosos/tatuajeazul.html">Tatuaje Azul</a></li>
+                    <li><a class="dropdown-item" href="../piojosos/artepiojoso.html">Arte Piojoso</a></li>
+                </ul>
+                </li>  
 
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="contactoDropdown" role="button" data-bs-toggle="dropdown">
@@ -103,12 +105,14 @@
 <!-- Fin Menu con Bootstrap -->
 
 
- 
+<main >
     <div>
       <section class="banner-seccion">
           <img src="../discografia/imagenes/banner-letras.png" alt="Letras" class="img-fluid">
       </section>
-      <main >
+      </div>
+
+ 
     <!-- Contenedor general (igual que en las otras páginas) -->
     <div class= "py-5">
       <!-- Título de la página -->
@@ -126,7 +130,7 @@
             ANDO GANAS
           </a>
           <!-- Contenido oculto para Fancybox -->
-          <div style="display: none;" id="lyric-andoganas">
+          <div style="display: none;" id="lyric-andoganas" class="lyric-content">
             <h2>Ando Ganas (1992)</h2>
             <p>
               Ando ganas de encontrarte<br>
@@ -190,7 +194,7 @@
           <a data-fancybox data-src="#lyric-angelito" href="javascript:;" class="btn btn-link">
             ANGELITO
           </a>
-          <div style="display: none;" id="lyric-angelito">
+          <div style="display: none;" id="lyric-angelito" class="lyric-content">
             <h2>Angelito (1994)</h2>
             <p>
               Harto del viejo borracho<br>
@@ -233,7 +237,7 @@
                  AL ATARDECER
                 </a>
                 <!-- Contenido oculto para Fancybox -->
-                <div style="display: none;" id="lyric-alatardecer">
+                <div style="display: none;" id="lyric-alatardecer" class="lyric-content">
                   <h2>Al Atardecer (1996)</h2>
                   <p>
                     Al atardecer<br>
@@ -310,7 +314,7 @@
                               AGUA
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-agua">
+                              <div style="display: none;" id="lyric-agua" class="lyric-content">
                                 <h2>Agua(1998)</h2>
                                 <p>
                                   Agua, cómo te deseo<br>
@@ -365,7 +369,7 @@
                              A VER CUANDO
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-avercuando">
+                              <div style="display: none;" id="lyric-avercuando" class="lyric-content">
                                 <h2>A ver Cuando (1998)</h2>
                                 <p>
                                   Estas danzando otra vez, vos sola<br>
@@ -402,7 +406,7 @@
                            AL DESIERTO
                             </a>
                             <!-- Contenido oculto para Fancybox -->
-                            <div style="display: none;" id="lyric-aldesierto">
+                            <div style="display: none;" id="lyric-aldesierto" class="lyric-content">
                               <h2>Al Desierto (2003)</h2>
                               <p>
                                 No me mires<br>
@@ -468,7 +472,7 @@
                           AMOR DE PERROS
                             </a>
                             <!-- Contenido oculto para Fancybox -->
-                            <div style="display: none;" id="lyric-amordeperros">
+                            <div style="display: none;" id="lyric-amordeperros" class="lyric-content">
                               <h2>Amor de Perros (2003)</h2>
                               <p>
                                 La vi pasar tan altanera<br>
@@ -518,7 +522,7 @@
                           A VECES
                             </a>
                             <!-- Contenido oculto para Fancybox -->
-                            <div style="display: none;" id="lyric-aveces">
+                            <div style="display: none;" id="lyric-aveces" class="lyric-content">
                               <h2>A Veces (1992)</h2>
                               <p>
                                 A veces, yo quiero moverte<br>
@@ -564,58 +568,7 @@
                               </p>
                             </div>
                           </div>                          
-                           <!-- letra 9 -->
-                           <div class="col-12 col-sm-6 col-lg-3 mb-4 lyric-item" data-title="A Veces">
-                            <a data-fancybox data-src="#lyric-aveces" href="javascript:;" class="btn btn-link">
-                          A VECES
-                            </a>
-                            <!-- Contenido oculto para Fancybox -->
-                            <div style="display: none;" id="lyric-aveces">
-                              <h2>A Veces (1992)</h2>
-                              <p>
-                                A veces, yo quiero moverte<br>
-                                A veces, yo quiero romperte<br>
-                                
-                                A veces, yo me vuelvo loco<br>
-                                A veces, ay~ si no te toco<br>
-                                
-                                A veces, voy pateando el piso<br>
-                                A veces, solo me deslizo<br>
-                                
-                                A veces, a veces se ceva<br>
-                                Y entonces, ella es mi problema<br>
-                                
-                                Y son las cosas del destino, y son las cosas de la suerte<br>
-                                Voy a salir nena a buscarte y vas a ver cuando te encuentre<br>
-                                
-                                A veces, yo quiero moverte<br>
-                                A veces, yo quiero tenerte<br>
-                                
-                                A veces, ella es la locura<br>
-                                A veces, yo quiero tenerte<br>
-                                A veces, solo ella me cura<br>
-                                
-                                Y son las cosas del destino, y son las cosas de la suerte<br>
-                                Voy a salir nena a buscarte y vas a ver cuando te encuentre<br>
-                                
-                                A veces<br>
-                                
-                                A veces, me muevo<br>
-                                A veces, me muero<br>
-                                
-                                Cuando decís te quiero, eso es lo que quiero sentir<br>
-                                Cuando decís te amo, cuando decis lo que decis<br>
-                                Cuando decis te quiero, eso es lo que quiero sentir<br>
-                                Cuando decis te amo, cuando decis lo que decis<br>
-                                Cuando decis te quiero, ¡cuando decis te quiero!<br>
-                                Cuando decis te amo, uh cuando de, uh cuando de, cuando de, cuando de<br>
-                                Cuando decis te quiero, eso es lo que quiero sentir<br>
-                                Cuando decis te amo<br>
-                                
-                                A veces<br>
-                              </p>
-                            </div>
-                          </div>                          
+                     
 
                            <!-- letra 10 -->
                            <div class="col-12 col-sm-6 col-lg-3 mb-4 lyric-item" data-title="Arco">
@@ -623,7 +576,7 @@
                           ARCO
                             </a>
                             <!-- Contenido oculto para Fancybox -->
-                            <div style="display: none;" id="lyric-arco">
+                            <div style="display: none;" id="lyric-arco" class="lyric-content">
                               <h2>Arco (1994)</h2>
                               <p>
                                 Arco<br>
@@ -674,7 +627,7 @@
                           BABILONIA
                             </a>
                             <!-- Contenido oculto para Fancybox -->
-                            <div style="display: none;" id="lyric-babilonia">
+                            <div style="display: none;" id="lyric-babilonia" class="lyric-content">
                               <h2>Babilonia (1994)</h2>
                               <p>
                                 Betembó, betembó, betembó, betembó<br>
@@ -716,7 +669,7 @@
                           BASTA DE PENAS
                             </a>
                             <!-- Contenido oculto para Fancybox -->
-                            <div style="display: none;" id="lyric-bastadepenas">
+                            <div style="display: none;" id="lyric-bastadepenas" class="lyric-content">
                               <h2>Basta de Penas (2007)</h2>
                               <p>
                                 Cuál es tu pena<br>
@@ -793,7 +746,7 @@
                             BICHO DE CIUDAD
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-bichodeciudad">
+                              <div style="display: none;" id="lyric-bichodeciudad" class="lyric-content">
                                 <h2>Bicho de ciudad (2007)</h2>
                                 <p>
                                   ¿Qué voy a hacer con tanto cielo para mí?<br>
@@ -847,7 +800,7 @@
                             BUENOS TIEMPOS
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-buenostiempos">
+                              <div style="display: none;" id="lyric-buenostiempos" class="lyric-content">
                                 <h2>Buenos Tiempos (1998)</h2>
                                 <p>
                                 Yo se que vendrán buenos tiempos<br>
@@ -889,7 +842,7 @@
                             BUENOS DIAS PALOMAR
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-buenosdiaspalomar">
+                              <div style="display: none;" id="lyric-buenosdiaspalomar" class="lyric-content">
                                 <h2>Buenos Días Palomar (2007)</h2>
                                 <p>
                                 Un barco vikingo<br>
@@ -989,121 +942,17 @@
                                 </p>
                               </div>
                             </div>  
-                                                        <!-- letra 15 -->
-                            <div class="col-12 col-sm-6 col-lg-3 mb-4 lyric-item" data-title="Buenos Días Palomar">
-                              <a data-fancybox data-src="#lyric-buenosdiaspalomar" href="javascript:;" class="btn btn-link">
-                            BUENOS DIAS PALOMAR
-                              </a>
-                              <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-buenosdiaspalomar">
-                                <h2>Buenos Días Palomar (2007)</h2>
-                                <p>
-                                Un barco vikingo<br>
-                                Va surcando el Maldonado<br>
-                                Para allá<br>
-                                Para allá<br>
-                                Lluvia negra<br>
-                                Lluvia como piedra<br>
-                                En la vela de metal<br>
-                                Oh oh oh<br>
-                                
-                                Árboles desiertos<br>
-                                Y una calle azul de invierno<br>
-                                Y el motor<br>
-                                De un avión<br>
-                                Algo es extraño<br>
-                                Todo esta como hace años<br>
-                                Como ayer<br>
-                                Como hoy<br>
-                                
-                                Te veo<br>
-                                Sonriente<br>
-                                Con la inglesa ahí enfrente<br>
-                                Verano<br>
-                                Se siente<br>
-                                En tu ropa liviana<br>
-                                
-                                Siestas el campito<br>
-                                Polvo y cielo y un fulbito<br>
-                                Sin final<br>
-                                Sin final<br>
-                                Paredes de fuego<br>
-                                En los cardos en enero<br>
-                                Y escapar<br>
-                                Escapar<br>
-                                
-                                Y el viejo Coco donde va<br>
-                                Siempre con su renguera<br>
-                                Y el viejo Coco donde va<br>
-                                Va en su Chevrolet<br>
-                                
-                                Y caminábamos a la par<br>
-                                Y caminábamos a la vez<br>
-                                Una mañana tus ojos miel<br>
-                                Y tu paladar<br>
-                                
-                                Oh oh oh<br>
-                                
-                                Beto se despide<br>
-                                Y Firulais que lo sigue<br>
-                                Mírenlos, mírenlos<br>
-                                Fondo de la escuela<br>
-                                Alguien prende una vela<br>
-                                Y el motor<br>
-                                Del avión<br>
-                                
-                                Y si te digo que no sé<br>
-                                Si te digo que me voy<br>
-                                Si te digo que me quedo<br>
-                                Porque amo tu color<br>
-                                
-                                Bicicletas otras vez<br>
-                                En la tierra bajo el Sol<br>
-                                Buenos días Palomar<br>
-                                Unos quieren y otros son<br>
-                                
-                                Te veo, sonriente<br>
-                                
-                                Y el viejo Coco donde va<br>
-                                
-                                Y caminábamos a la par<br>
-                                
-                                Bicicletas otra vez<br>
-                                
-                                Llegar, buscar, jugar, abrir<br>
-                                Amar, caer, dejar, sufrir<br>
-                                Volver, probar, pagar, seguir<br>
-                                Anduve tanto tiem' dando vueltas<br>
-                                Así amor, que hace ami amor<br>
-                                Mi cama individual<br>
-                                Viene en bombo, bebé<br>
-                                Celebralo bailá<br>
-                                Ahí va el tambor<br>
-                                Tibio no bailes<br>
-                                Tibio no bailé<br>
-                                
-                                Me querés decir adonde<br>
-                                Adonde se fue y se esconde<br>
-                                Me querés decir adonde<br>
-                                Va la sombra de lo que era<br>
-                                
-                                Si vos querés estar libre<br>
-                                Si querés alto volar<br>
-                                Que haya un hachazo en tu ojo<br>
-                                Pero una flor en tu ojal<br>
-                                Si vos querés estar libre<br>
-                                </p>
-                              </div>
-                            </div>
+  
                              <!-- letra 16 -->
                              <div class="col-12 col-sm-6 col-lg-3 mb-4 lyric-item" data-title="Chac tu Chac">
                               <a data-fancybox data-src="#lyric-chac" href="javascript:;" class="btn btn-link">
                             CHAC TU CHAC
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-chac">
-                                <p>
+                              <div style="display: none;" id="lyric-chac" class="lyric-content">
+                               
                                 <h2>Chac Tu Chac (1992)</h2>
+                                <p>
                                 Si vos querés estar libre<br>
                                 Si querés alto volar<br>
                                 No dejes que te den el tiro<br>
@@ -1144,9 +993,10 @@
                             CANCHEROS
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-cancheros">
-                                <p>
+                              <div style="display: none;" id="lyric-cancheros" class="lyric-content">
+                               
                                 <h2>Cancheros (1992)</h2>
+                                <p>
                                 No queremos las migas, no queremos la hiel<br>
                                 No queremos la mugre nena que joder.<br>
                                 No queremos las sobras, no queremos la piel,<br>
@@ -1183,9 +1033,10 @@
                             CANCION DE CUNA
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-canciondecuna">
-                                <p>
+                              <div style="display: none;" id="lyric-canciondecuna" class="lyric-content">
+                              
                                 <h2>Canción de Cuna (2003)</h2>
+                                <p>
                                 Quiero que te duermas como un Sol<br>
                                 Que se acuesta en un campo de trigo<br>
                                 Tengo aquí en mi pecho un corazón<br>
@@ -1241,7 +1092,7 @@
                             CIVILIZACION
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-civilizacion">
+                              <div style="display: none;" id="lyric-civilizacion" class="lyric-content">
                                 <h2>Civilización (2007)</h2>
                                 <p>
                                 Hay algo que está sonando<br>
@@ -1330,7 +1181,7 @@
                             COMO ALI
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-comoali">
+                              <div style="display: none;" id="lyric-comoali" class="lyric-content">
                                 <h2>Como Alí (2003)</h2>
                                 <p>
                                 Es la nueva sensación<br>
@@ -1433,7 +1284,7 @@
                             CRUCES Y FLORES
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-crucesyflores">
+                              <div style="display: none;" id="lyric-crucesyflores" class="lyric-content">
                                 <h2>Cruces y Flores (2007)</h2>
                                 <p>
                                 A pesar del tiempo,<br>
@@ -1500,7 +1351,7 @@
                             DESDE LEJOS NO SE VE
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-desdelejos">
+                              <div style="display: none;" id="lyric-desdelejos" class="lyric-content">
                                 <h2>Desde Lejos No Se Ve (1998)</h2>
                                 <p>
                                 Desde lejos no se ve<br>
@@ -1585,7 +1436,7 @@
                             DIENTES DE CORDERO
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-dientes">
+                              <div style="display: none;" id="lyric-dientes" class="lyric-content">
                                 <h2>Dientes de Cordero (2003)</h2>
                                 <p>
                                 Dientes de corderos, sobre la ciudad<br>
@@ -1641,7 +1492,7 @@
                             DIFICIL
                               </a>
                               <!-- Contenido oculto para Fancybox -->
-                              <div style="display: none;" id="lyric-dificil">
+                              <div style="display: none;" id="lyric-dificil" class="lyric-content">
                                 <h2>Difícil (2007)</h2>
                                 <p>
                                 El heredero al trono ruso<br>
@@ -1716,7 +1567,7 @@
                                 EL BALNEARIO DE LOS DRS CROTOS
                                   </a>
                                   <!-- Contenido oculto para Fancybox -->
-                                  <div style="display: none;" id="lyric-elbalneario">
+                                  <div style="display: none;" id="lyric-elbalneario" class="lyric-content">
                                     <h2>El Balneario de los Doctores Crotos (1998)</h2>
                                     <p>
                                     Aia, ia, io, pagué, io<br>
@@ -1778,7 +1629,7 @@
                                 EL FAROLITO
                                   </a>
                                   <!-- Contenido oculto para Fancybox -->
-                                  <div style="display: none;" id="lyric-elfarolito">
+                                  <div style="display: none;" id="lyric-elfarolito" class="lyric-content">
                                     <h2>El Farolito (1996)</h2>
                                     <p>
                                       Uoh-bam-ba-uoh-bam-ba<br>
@@ -1870,7 +1721,7 @@
                               ENTRANDO EN TU CIUDAD
                                 </a>
                                 <!-- Contenido oculto para Fancybox -->
-                                <div style="display: none;" id="lyric-entrando">
+                                <div style="display: none;" id="lyric-entrando" class="lyric-content">
                                   <h2>Entrando en tu Ciudad (2003)</h2>
                                   <p>
                                     En este bosque donde los arboles son viejos<br>
@@ -1910,7 +1761,7 @@
                                     ESQUINA LIBERTAD
                                       </a>
                                       <!-- Contenido oculto para Fancybox -->
-                                      <div style="display: none;" id="lyric-esquina">
+                                      <div style="display: none;" id="lyric-esquina" class="lyric-content">
                                         <h2>Esquina Libertad (1996)</h2>
                                         <p>
                                           Esquina libertad<br>
@@ -1957,7 +1808,7 @@
                                     FANTASMA
                                       </a>
                                       <!-- Contenido oculto para Fancybox -->
-                                      <div style="display: none;" id="lyric-fantasma">
+                                      <div style="display: none;" id="lyric-fantasma" class="lyric-content">
                                         <h2>Fantasma (2003)</h2>
                                         <p>
                                           Voy cruzando las paredes de tu casa<br>
@@ -2001,7 +1852,7 @@
                                   FIJATE
                                     </a>
                                     <!-- Contenido oculto para Fancybox -->
-                                    <div style="display: none;" id="lyric-fijate">
+                                    <div style="display: none;" id="lyric-fijate" class="lyric-content">
                                       <h2>Fijate (2000)</h2>
                                       <p>
                                         Todo lo que me queda<br>
@@ -2067,7 +1918,7 @@
                                   FUMIGATOR
                                     </a>
                                     <!-- Contenido oculto para Fancybox -->
-                                    <div style="display: none;" id="lyric-fumigator">
+                                    <div style="display: none;" id="lyric-fumigator" class="lyric-content">
                                       <h2>Fumigator (1994)</h2>
                                       <p>
                                         Yo ya no sé<br>
@@ -2171,123 +2022,14 @@
                                       </p>
             </div>
           </div>          
-                                  <!-- letra 30 -->
-                                  <div class="col-12 col-sm-6 col-lg-3 mb-4 lyric-item" data-title="Fumigator">
-                                    <a data-fancybox data-src="#lyric-fumigator" href="javascript:;" class="btn btn-link">
-                                  FUMIGATOR
-                                    </a>
-                                    <!-- Contenido oculto para Fancybox -->
-                                    <div style="display: none;" id="lyric-fumigator">
-                                      <h2>Fumigator (1994)</h2>
-                                      <p>
-                                        Yo ya no sé<br>
-                                        Parece amor<br>
-                                        Nunca entendí<br>
-                                        Cómo llegué acá<br>
-                                        Pero ya ves<br>
-                                        Una por mes<br>
-                                        Me das el vento y<br>
-                                        Yo te hago tan mal<br>
-                                        
-                                        Yo ya no sé<br>
-                                        Parece amor<br>
-                                        Nunca entendí<br>
-                                        Cómo llegué acá<br>
-                                        Pero ya ves<br>
-                                        Una por mes<br>
-                                        Me das el vento y<br>
-                                        Yo te hago tan mal<br>
-                                        
-                                        Yo ya no sé<br>
-                                        Parece amor<br>
-                                        Nunca entendí<br>
-                                        Cómo llegué acá<br>
-                                        Pero ya ves<br>
-                                        Una por mes<br>
-                                        Me das el vento y<br>
-                                        Yo te hago tan mal<br>
-                                        
-                                        Yo ya no sé<br>
-                                        Parece amor<br>
-                                        Nunca entendí<br>
-                                        Cómo llegué acá<br>
-                                        Pero ya ves<br>
-                                        Una por mes<br>
-                                        Me das el vento y<br>
-                                        Yo te hago tan mal<br>
-                                        
-                                        Yo te adoro cucaracha, cuando bailas mi funk<br>
-                                        Yo te adoro cucaracha, cuando bailas mi funk<br>
-                                        
-                                        Así que ves<br>
-                                        Bicho con pies<br>
-                                        Que ya con vos<br>
-                                        No puedo yo hablar<br>
-                                        Si esa mujer<br>
-                                        Me paga bien<br>
-                                        Tengo que hacerlo y<br>
-                                        Mejor olvidar<br>
-                                        
-                                        Así que ves<br>
-                                        Bicho con pies<br>
-                                        Que ya con vos<br>
-                                        No puedo yo hablar<br>
-                                        Si esa mujer<br>
-                                        Me paga bien<br>
-                                        Tengo que hacerlo y<br>
-                                        Mejor olvidar<br>
-                                        
-                                        Yo te adoro cucaracha, cuando bailas mi funk<br>
-                                        Yo te adoro cucaracha, cuando bailas mi funk<br>
-                                        Yo te adoro cucaracha, cuando bailas mi funk<br>
-                                        Yo te adoro cucaracha, cuando bailas mi... ¡Mambo!<br>
-                                        
-                                        En la cocina, en la alacena<br>
-                                        En el costado de la chimenea<br>
-                                        Bajo la ducha, en el ropero<br>
-                                        Bajo la cama y en el lavadero<br>
-                                        
-                                        En la cocina, en la alacena<br>
-                                        En el costado de la chimenea<br>
-                                        Bajo la ducha, en el ropero<br>
-                                        Bajo la cama y en el lavadero ¡hey!<br>
-                                        
-                                        Yo te adoro cucaracha, cuando bailas mi mambo<br>
-                                        Yo te adoro cucaracha, cuando bailas mi mambo<br>
-                                        
-                                        En la cocina, en la alacena<br>
-                                        En el costado de la chimenea<br>
-                                        Bajo la ducha, en el ropero<br>
-                                        Bajo la cama y en el lavadero<br>
-                                        
-                                        En la cocina, en la alacena<br>
-                                        En el costado de la chimenea<br>
-                                        Bajo la ducha, en el ropero<br>
-                                        Bajo la cama y en el lavadero<br>
-                                        
-                                        Donde vas, donde vas<br>
-                                        Donde vas, donde vas<br>
-                                        Donde vas, donde vas<br>
-                                        Donde vas, donde vas<br>
-                                        Donde vas, Donde vas<br>
-                                        Donde vas, Donde vas<br>
-                                        Donde vas, Donde vas<br>
-                                        Donde vas, Donde vas<br>
-                                        Donde vas, Donde vas<br>
-
-                                        Donde vas<br>
-                                        
-                                        Yo te adoro<br>                                                                                                                                                                                                                                                                                                                                    
-                                      </p>
-            </div>
-          </div>
+  
                                  <!-- letra 31 -->
                                  <div class="col-12 col-sm-6 col-lg-3 mb-4 lyric-item" data-title="Genius">
                                   <a data-fancybox data-src="#lyric-genius" href="javascript:;" class="btn btn-link">
                                 GENIUS
                                   </a>
                                   <!-- Contenido oculto para Fancybox -->
-                                  <div style="display: none;" id="lyric-genius">
+                                  <div style="display: none;" id="lyric-genius" class="lyric-content">
                                     <h2>Genius (1998)</h2>
                                     <p>
                                       No puedo invocar a mi genio<br>
@@ -2329,7 +2071,7 @@
                                 GO NEGRO GO
                                   </a>
                                   <!-- Contenido oculto para Fancybox -->
-                                  <div style="display: none;" id="lyric-gonegro">
+                                  <div style="display: none;" id="lyric-gonegro" class="lyric-content">
                                     <h2>Go Negro Go (1998)</h2>
                                     <p>
                                       Todo ya amaneció<br>
@@ -2373,7 +2115,7 @@
                                 GLOBALIZACION
                                   </a>
                                   <!-- Contenido oculto para Fancybox -->
-                                  <div style="display: none;" id="lyric-globa">
+                                  <div style="display: none;" id="lyric-globa" class="lyric-content">
                                     <h2>Globalización (2000)</h2>
                                     <p>
                                       Cuervo mexicano<br>
@@ -2427,7 +2169,7 @@
                                 HOY ES HOY
                                   </a>
                                   <!-- Contenido oculto para Fancybox -->
-                                  <div style="display: none;" id="lyric-hoy">
+                                  <div style="display: none;" id="lyric-hoy" class="lyric-content">
                                     <h2>Hoy es Hoy (2007)</h2>
                                     <p>
                                       Nadie va a sacarte nunca de donde estás<br>
@@ -2491,7 +2233,7 @@
                                         LANGOSTAS
                                           </a>
                                           <!-- Contenido oculto para Fancybox -->
-                                          <div style="display: none;" id="lyric-langostas">
+                                          <div style="display: none;" id="lyric-langostas" class="lyric-content">
                                             <h2>Langostas (2003)</h2>
                                             <p>
                                               Miles de langostas<br>
@@ -2546,7 +2288,7 @@
                                         LLEVATELO
                                           </a>
                                           <!-- Contenido oculto para Fancybox -->
-                                          <div style="display: none;" id="lyric-llevatelo">
+                                          <div style="display: none;" id="lyric-llevatelo" class="lyric-content">
                                             <h2>Llevatelo (2003)</h2>
                                             <p>
                                               Estoy así, tan triste, ves<br>
@@ -2610,7 +2352,7 @@
                                       LOS MOCOSOS
                                         </a>
                                         <!-- Contenido oculto para Fancybox -->
-                                        <div style="display: none;" id="lyric-mocosos">
+                                        <div style="display: none;" id="lyric-mocosos" class="lyric-content">
                                           <h2>Mocosos (1992)</h2>
                                           <p>
                                             En la tierra del ruido<br>
@@ -2665,7 +2407,7 @@
                                       MANISE
                                         </a>
                                         <!-- Contenido oculto para Fancybox -->
-                                        <div style="display: none;" id="lyric-manise">
+                                        <div style="display: none;" id="lyric-manise" class="lyric-content">
                                           <h2>Manise (1994)</h2>
                                           <p>
                                             Bajo el puente helado del olvido<br>
@@ -2717,7 +2459,7 @@
                                       MANJAR
                                         </a>
                                         <!-- Contenido oculto para Fancybox -->
-                                        <div style="display: none;" id="lyric-manjar">
+                                        <div style="display: none;" id="lyric-manjar" class="lyric-content">
                                           <h2>Manjar (2007)</h2>
                                           <p>
                                             Esta noche tarde nena<br>
@@ -2803,7 +2545,7 @@
                                       MARADÓ
                                         </a>
                                         <!-- Contenido oculto para Fancybox -->
-                                        <div style="display: none;" id="lyric-marado">
+                                        <div style="display: none;" id="lyric-marado" class="lyric-content">
                                           <h2>Maradó(1996)</h2>
                                           <p>
                                             Dicen que escapó de un sueño<br>
@@ -2895,7 +2637,7 @@
                                       MURGUITA
                                         </a>
                                         <!-- Contenido oculto para Fancybox -->
-                                        <div style="display: none;" id="lyric-murguita">
+                                        <div style="display: none;" id="lyric-murguita" class="lyric-content">
                                           <h2>Murguita (1998)</h2>
                                           <p>
                                             Eh ah eh ah ah eh<br>
@@ -2946,7 +2688,7 @@
                                     NO PARES
                                       </a>
                                       <!-- Contenido oculto para Fancybox -->
-                                      <div style="display: none;" id="lyric-nopares">
+                                      <div style="display: none;" id="lyric-nopares" class="lyric-content">
                                         <h2>No Pares (2003)</h2>
                                         <p>
                                           Tantas historias se pierden<br>
@@ -3011,7 +2753,7 @@
                                     OLVIDATE
                                       </a>
                                       <!-- Contenido oculto para Fancybox -->
-                                      <div style="display: none;" id="lyric-olvidate">
+                                      <div style="display: none;" id="lyric-olvidate" class="lyric-content">
                                         <h2>Olvidate (1998)</h2>
                                         <p>
                                           Ya ves, eso te digo<br>
@@ -3060,7 +2802,7 @@
                                     PACIFICO
                                       </a>
                                       <!-- Contenido oculto para Fancybox -->
-                                      <div style="display: none;" id="lyric-pacifico">
+                                      <div style="display: none;" id="lyric-pacifico" class="lyric-content">
                                         <h2>Pacífico (2007)</h2>
                                         <p>
                                           Ahora que estoy vacío<br>
@@ -3121,7 +2863,7 @@
                                   PISTOLAS
                                     </a>
                                     <!-- Contenido oculto para Fancybox -->
-                                    <div style="display: none;" id="lyric-pistolas">
+                                    <div style="display: none;" id="lyric-pistolas" class="lyric-content">
                                       <h2>Pistolas (1994)</h2>
                                       <p>
                                         Tanto tanto te cuidabas y ahora estás escofinada<br>
@@ -3164,7 +2906,7 @@
                                   QUEMADO
                                     </a>
                                     <!-- Contenido oculto para Fancybox -->
-                                    <div style="display: none;" id="lyric-quemado">
+                                    <div style="display: none;" id="lyric-quemado" class="lyric-content">
                                       <h2>Quemado (1998)</h2>
                                       <p>
                                         ¿Quién es el que gana?<br>
@@ -3245,7 +2987,7 @@
                                   RULETA
                                     </a>
                                     <!-- Contenido oculto para Fancybox -->
-                                    <div style="display: none;" id="lyric-ruleta">
+                                    <div style="display: none;" id="lyric-ruleta" class="lyric-content">
                                       <h2>Ruleta (2000)</h2>
                                       <p>
                                         En Comodoro, rasgaste mi piel<br>
@@ -3326,7 +3068,7 @@
                                 SIEMPRE BAJANDO
                                   </a>
                                   <!-- Contenido oculto para Fancybox -->
-                                  <div style="display: none;" id="lyric-siemprebajando">
+                                  <div style="display: none;" id="lyric-siemprebajando" class="lyric-content">
                                     <h2>Siempre Bajando (1992)</h2>
                                     <p>
                                       No me quemes la cabeza<br>
@@ -3362,7 +3104,7 @@
                                 SHUP SHUP
                                   </a>
                                   <!-- Contenido oculto para Fancybox -->
-                                  <div style="display: none;" id="lyric-shupshup">
+                                  <div style="display: none;" id="lyric-shupshup" class="lyric-content">
                                     <h2>Shup Shup (1996)</h2>
                                     <p>
                                       El tipo dice que es difícil, que lo duro va a pasar<br>
@@ -3397,7 +3139,7 @@
                                 SUDESTADA
                                   </a>
                                   <!-- Contenido oculto para Fancybox -->
-                                  <div style="display: none;" id="lyric-sudestada">
+                                  <div style="display: none;" id="lyric-sudestada" class="lyric-content">
                                     <h2>Sudestada (2003)</h2>
                                     <p>
                                       Vivo en sudestada desde que recuerdo yo<br>
@@ -3438,7 +3180,7 @@
                                 TAN SOLO
                                   </a>
                                   <!-- Contenido oculto para Fancybox -->
-                                  <div style="display: none;" id="lyric-tansolo">
+                                  <div style="display: none;" id="lyric-tansolo" class="lyric-content">
                                     <h2>Tan Solo (1992)</h2>
                                     <p>
                                       Quizá no sea el vino<br>
@@ -3509,7 +3251,7 @@
                                 TAXI BOY
                                   </a>
                                   <!-- Contenido oculto para Fancybox -->
-                                  <div style="display: none;" id="lyric-taxiboy">
+                                  <div style="display: none;" id="lyric-taxiboy" class="lyric-content">
                                     <h2>Taxi Boy (1998)</h2>
                                     <p>
                                       Negro Blues gran cartel, taxi boy para donde estés<br>
@@ -3539,7 +3281,7 @@
                                 TODO PASA
                                   </a>
                                   <!-- Contenido oculto para Fancybox -->
-                                  <div style="display: none;" id="lyric-todopasa">
+                                  <div style="display: none;" id="lyric-todopasa" class="lyric-content">
                                     <h2>Todo Pasa (1996)</h2>
                                     <p>
                                       En la ciudad gris, bares y cafés,<br>
@@ -3586,7 +3328,7 @@
                                 VINE HASTA AQUI
                                   </a>
                                   <!-- Contenido oculto para Fancybox -->
-                                  <div style="display: none;" id="lyric-vine">
+                                  <div style="display: none;" id="lyric-vine" class="lyric-content">
                                     <h2>Vine Hasta Aquí (200)</h2>
                                     <p>
                                       Vine hasta aquí<br>
@@ -3648,7 +3390,7 @@
                                         VERANO DEL 92
                                           </a>
                                           <!-- Contenido oculto para Fancybox -->
-                                          <div style="display: none;" id="lyric-verano">
+                                          <div style="display: none;" id="lyric-verano" class="lyric-content">
                                             <h2>verano del 92' (1996)</h2>
                                             <p>
                                               Juan Pedro Fasola, nuestro gran amigo<br>
@@ -3706,9 +3448,10 @@
                                             </p>
                   </div>
                 </div>   
-      <!-- Agrega más letras de la misma forma -->
+
     </div>
   </div>
+</div>
 
 
 

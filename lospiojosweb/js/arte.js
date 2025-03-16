@@ -9,11 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function showImage(index) {
         if (index >= 0 && index < images.length) {
-            modalImage.src = images[index].src;
-            currentIndex = index;
+            const newSrc = images[index].src;
+            if (newSrc) { // Solo cambia el src si es válido
+                modalImage.src = newSrc;
+                currentIndex = index;
+            }
         }
     }
-
     images.forEach((img, index) => {
         img.addEventListener("click", function () {
             showImage(index);

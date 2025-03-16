@@ -384,7 +384,19 @@ h2 {
     padding: 20px;
     border-radius: 8px;
 }
+/* Ajustes para el texto dentro de los modales */
+.fancybox-content {
+    color: black !important;
+}
 
+.fancybox-content h2, 
+.lyric-content p {
+    color: black !important;
+  }
+
+  .fancybox-content p {
+    color: black !important;
+  }
 /* Contenedor principal */
 .video-gallery {
     display: grid;
@@ -459,21 +471,7 @@ section .card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
 }
-.polaroid {
-    width: 300px; /* Ajusta el ancho según lo que necesites */
-    height: auto; /* Para mantener la proporción */
-    padding: 10px;
-    background: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
 
-.polaroid img {
-    width: 100%;
-    max-height: 300px; /* Límite de altura sin forzarla */
-    object-fit: contain; /* Evita que la imagen se recorte */
-    display: block;
-}
 
 #carrusel-memorabilia .carousel-item img {
     width: auto; /* Mantiene el tamaño original si no es mayor que el contenedor */
@@ -514,10 +512,7 @@ section .card:hover {
     transition: transform 0.3s ease-in-out;
 }
 
-.image-container img:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-}
+
 
 /* Contenedor específico de texto */
 .contenedor-texto-piojoso {
@@ -690,9 +685,7 @@ section .card:hover {
 /* Ajuste especial SOLO para móviles */
 @media (max-width: 768px) {
     body {
-    
         background-position: top center; /* Asegura que la parte más importante se vea */
-   
     }
 
     .video-container {
@@ -711,59 +704,53 @@ section .card:hover {
         left: 0;
     }
 
-
     .banner-container button {
         padding: 8px 12px;
         font-size: 0.9rem;
     }
+    
     .banner-seccion {
         height: auto; /* Deja que el contenido defina la altura */
-
     }
 
     .banner-seccion img {
         height: auto; /* Mantiene la proporción */
-
-     
     }
+
     .contenedor-fechas {
         max-width: 100%; /* Se adapta en pantallas medianas */
-        
+    }
 
+    .row .col-12 {
+        flex: 0 0 100%; /* Hace que las columnas ocupen todo el ancho en pantallas pequeñas */
     }
-    .row {
-        .col-12 {
-            flex: 0 0 100%; /* Hace que las columnas ocupen todo el ancho en pantallas pequeñas */
-        }
-    
-        .card {
-            max-width: 100%; /* Evita que las tarjetas se estiren demasiado */
-            width: 100%;     /* Hace que las tarjetas ocupen el 100% del ancho disponible */
-        }
-    
-        .card-body {
-            padding: 1rem; /* Ajusta el padding para que la tarjeta sea más compacta */
-        }  
-        .card img {
-            height: 200px; /* Reduce la altura en pantallas chicas */
-        }
-    
-        .card {
-            margin-bottom: 20px; /* Separa más las tarjetas */
-        }
-   
+
+    .card {
+        max-width: 100%; /* Evita que las tarjetas se estiren demasiado */
+        width: 100%; /* Hace que las tarjetas ocupen el 100% del ancho disponible */
+        margin-bottom: 20px; /* Separa más las tarjetas */
     }
-        @media (max-width: 576px) {
-            section .card {
-                padding: 15px; /* Reduce el padding en pantallas pequeñas */
-            }
-            
-            .form-control {
-                font-size: 14px; /* Ajusta el tamaño del texto en inputs */
-            }
-            
-            button.btn {
-                width: 100%; /* Botón de ancho completo en móviles */
-            }
-        }        
-  }
+
+    .card-body {
+        padding: 1rem; /* Ajusta el padding para que la tarjeta sea más compacta */
+    }
+
+    .card img {
+        height: 200px; /* Reduce la altura en pantallas chicas */
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    section .card {
+        padding: 15px; /* Reduce el padding en pantallas pequeñas */
+    }
+    
+    .form-control {
+        font-size: 14px; /* Ajusta el tamaño del texto en inputs */
+    }
+    
+    button.btn {
+        width: 100%; /* Botón de ancho completo en móviles */
+    }
+}
